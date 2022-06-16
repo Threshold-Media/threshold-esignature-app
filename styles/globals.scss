@@ -1,0 +1,137 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+div, section, main {
+  position: relative;
+}
+
+picture,
+source,
+img {
+  display: block;
+}
+
+select {
+  cursor: pointer;
+}
+
+#__next {
+  height: 100%;
+}
+
+.__layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 80px;
+  .nav_grid_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &.active {
+      background-color: var(--chakra-colors-blue-800);
+    }
+  }
+}
+
+.template__image {
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+  &.click {
+    opacity: 0.5;
+  }
+}
+
+.template__badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  &.click {
+    opacity: 1;
+  }
+}
+
+.colorize {
+  width: 100vw;
+  min-width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle 800px at 700px 200px, rgba(249, 133, 52, .65), var(---transparent)),
+            radial-gradient(circle 600px at calc(100% - 300px) 100px, rgba(91, 130, 209, .5), var(---transparent)),
+            radial-gradient(circle 800px at right center, rgba(249, 133, 52, .5), var(---transparent)),
+            radial-gradient(circle 800px at right bottom, rgba(250, 160, 97, .5), var(---transparent)),
+            radial-gradient(circle 800px at calc(50% - 600px) calc(100% - 100px), rgba(44, 82, 160, .65), rgba(91, 130, 209, .5), var(---transparent));
+  ---transparent: rgba(255,255,255,0);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.5);
+  }
+}
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login__container {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    .login__logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+option {
+  color: #000;
+}
